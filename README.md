@@ -309,7 +309,9 @@ MONGODB_URI=your_mongodb_uri (optional)
 
 1. Push code to GitHub (already done ✓)
 2. Deploy backend to Render (see DEPLOYMENT_GUIDE.md)
+   - ⚠️ **Important**: Use Root Directory = `server` (NOT `tata-loan-chatbot/server`)
 3. Deploy frontend to Vercel (see DEPLOYMENT_GUIDE.md)
+   - ⚠️ **Important**: Use Root Directory = `client` (NOT `tata-loan-chatbot/client`)
 4. Update CORS settings with production URLs
 5. Test your live application!
 

@@ -3,6 +3,7 @@ services:
     name: bank-loan-server
     env: node
     plan: free
+    rootDir: server
     buildCommand: npm install
     startCommand: npm start
     envVars:
@@ -13,5 +14,7 @@ services:
       - key: JWT_SECRET
         generateValue: true
       - key: MONGODB_URI
+        sync: false
+      - key: FRONTEND_URL
         sync: false
     healthCheckPath: /api/health

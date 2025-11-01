@@ -27,7 +27,7 @@ This guide will help you deploy your Bank Loan Chatbot application for **FREE** 
    - **Name**: `bank-loan-server` (or any name you prefer)
    - **Region**: Choose closest to you
    - **Branch**: `main`
-   - **Root Directory**: `tata-loan-chatbot/server`
+   - **Root Directory**: `server` ⚠️ **IMPORTANT**: Use `server` (NOT `tata-loan-chatbot/server`)
    - **Runtime**: `Node`
    - **Build Command**: `npm install`
    - **Start Command**: `npm start`
@@ -74,7 +74,7 @@ FRONTEND_URL=https://your-app-name.vercel.app (we'll update this after frontend 
 2. Import your GitHub repository: `tousifrahaman11/Bank-loan`
 3. Configure the project:
    - **Framework Preset**: Vite
-   - **Root Directory**: `tata-loan-chatbot/client`
+   - **Root Directory**: `client` ⚠️ **IMPORTANT**: Use `client` (NOT `tata-loan-chatbot/client`)
    - **Build Command**: `npm run build` (auto-detected)
    - **Output Directory**: `dist` (auto-detected)
    - **Install Command**: `npm install` (auto-detected)

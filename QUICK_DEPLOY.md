@@ -13,7 +13,7 @@
 1. **Sign up**: [render.com](https://render.com) (GitHub login)
 2. **New Web Service**:
    - Connect repo: `tousifrahaman11/Bank-loan`
-   - Root: `tata-loan-chatbot/server`
+   - Root: `server` ⚠️ (NOT `tata-loan-chatbot/server`)
    - Build: `npm install`
    - Start: `npm start`
    - Plan: **Free**
@@ -31,7 +31,7 @@
 1. **Sign up**: [vercel.com](https://vercel.com) (GitHub login)
 2. **Import Project**:
    - Repo: `tousifrahaman11/Bank-loan`
-   - Root: `tata-loan-chatbot/client`
+   - Root: `client` ⚠️ (NOT `tata-loan-chatbot/client`)
    - Framework: **Vite** (auto-detect)
 3. **Environment Variable**:
    ```
