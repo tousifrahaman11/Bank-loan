@@ -272,19 +272,46 @@ MIT License - Free to use for personal and commercial projects
 
 ## 🚀 Deployment
 
-**Frontend (Vercel/Netlify):**
-```bash
-cd client
-npm run build
-# Deploy 'dist' folder
+### Free Deployment Options
+
+This project is ready for **FREE** deployment using:
+- **Frontend**: Vercel (recommended) or Netlify
+- **Backend**: Render (recommended) or Railway
+
+### Quick Start
+
+📖 **See detailed deployment guide**: [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md)
+
+⚡ **Quick checklist**: [QUICK_DEPLOY.md](./QUICK_DEPLOY.md)
+
+### Configuration Files
+
+- Frontend: `client/vercel.json` (Vercel configuration)
+- Backend: `server/render.yaml` (Render configuration)
+
+### Environment Variables
+
+**Frontend (Vercel)**:
+```
+VITE_API_URL=https://your-backend-url.onrender.com
 ```
 
-**Backend (Render/Railway):**
-```bash
-cd server
-# Set environment variables in platform
-# Deploy with start command: node server.js
+**Backend (Render)**:
 ```
+NODE_ENV=production
+PORT=10000
+JWT_SECRET=your_secret_key_here
+FRONTEND_URL=https://your-frontend-url.vercel.app
+MONGODB_URI=your_mongodb_uri (optional)
+```
+
+### Deployment Steps
+
+1. Push code to GitHub (already done ✓)
+2. Deploy backend to Render (see DEPLOYMENT_GUIDE.md)
+3. Deploy frontend to Vercel (see DEPLOYMENT_GUIDE.md)
+4. Update CORS settings with production URLs
+5. Test your live application!
 
 ## 📞 Support
 
