@@ -41,7 +41,26 @@ const LoginModal = () => {
         onClose();
       }, 500);
     } catch (error) {
-      const message = error.response?.data?.message || 'An error occurred. Please try again.';
+      // Better error handling with more specific messages
+      let message = 'An error occurred. Please try again.';
+      
+      if (error.userMessage) {
+        message = error.userMessage;
+      } else if (error.response?.data?.message) {
+        message = error.response.data.message;
+      } else if (error.message) {
+        // Network errors
+        if (error.message.includes('Network Error') || error.code === 'ERR_NETWORK') {
+          message = 'Cannot connect to server. Please check your backend URL or try again later.';
+        } else if (error.message.includes('timeout')) {
+          message = 'Request timeout. Please try again.';
+        } else if (error.message.includes('CORS')) {
+          message = 'CORS error. Please check backend CORS configuration.';
+        } else {
+          message = error.message;
+        }
+      }
+
       dispatch(loginFailure(message));
       
       // If email exists error during signup, auto-switch to login
@@ -53,6 +72,12 @@ const LoginModal = () => {
         }, 1000);
       } else {
         toast.error(message);
+        // Log for debugging
+        console.error('Login/Signup Error:', {
+          error,
+          message,
+          apiUrl: import.meta.env.VITE_API_URL
+        });
       }
     } finally {
       dispatch(setLoading(false));
