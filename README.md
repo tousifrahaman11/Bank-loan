@@ -282,16 +282,22 @@ This project is ready for **FREE** deployment using:
 
 📖 **See detailed deployment guide**: [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md)
 
+🎨 **Vercel deployment steps**: [VERCEL_DEPLOYMENT_STEPS.md](./VERCEL_DEPLOYMENT_STEPS.md)
+
+🌐 **Netlify deployment steps**: [NETLIFY_DEPLOYMENT_STEPS.md](./NETLIFY_DEPLOYMENT_STEPS.md)
+
 ⚡ **Quick checklist**: [QUICK_DEPLOY.md](./QUICK_DEPLOY.md)
 
 ### Configuration Files
 
-- Frontend: `client/vercel.json` (Vercel configuration)
+- Frontend: 
+  - `client/vercel.json` (Vercel configuration)
+  - `client/netlify.toml` (Netlify configuration)
 - Backend: `server/render.yaml` (Render configuration)
 
 ### Environment Variables
 
-**Frontend (Vercel)**:
+**Frontend (Vercel or Netlify)**:
 ```
 VITE_API_URL=https://your-backend-url.onrender.com
 ```
@@ -310,8 +316,11 @@ MONGODB_URI=your_mongodb_uri (optional)
 1. Push code to GitHub (already done ✓)
 2. Deploy backend to Render (see DEPLOYMENT_GUIDE.md)
    - ⚠️ **Important**: Use Root Directory = `server` (NOT `tata-loan-chatbot/server`)
-3. Deploy frontend to Vercel (see DEPLOYMENT_GUIDE.md)
-   - ⚠️ **Important**: Use Root Directory = `client` (NOT `tata-loan-chatbot/client`)
+3. Deploy frontend to Vercel or Netlify:
+   - **Vercel**: See [VERCEL_DEPLOYMENT_STEPS.md](./VERCEL_DEPLOYMENT_STEPS.md)
+     - ⚠️ **Important**: Use Root Directory = `client` (NOT `tata-loan-chatbot/client`)
+   - **Netlify**: See [NETLIFY_DEPLOYMENT_STEPS.md](./NETLIFY_DEPLOYMENT_STEPS.md)
+     - ⚠️ **Important**: Use Base directory = `client` (NOT `tata-loan-chatbot/client`)
 4. Update CORS settings with production URLs
 5. Test your live application!
 
