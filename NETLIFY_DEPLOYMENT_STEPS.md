@@ -56,7 +56,12 @@ After selecting your repository, you'll see the **"Configure Netlify Build"** pa
 - If not, enter: `dist`
 - ✅ Leave as is
 
-**OR** Netlify will automatically detect the `netlify.toml` file and use those settings!
+### Node version
+- The `netlify.toml` file already specifies Node 20 ✅
+- Netlify will automatically use Node 20 for the build
+- ✅ No action needed - this is already configured!
+
+**Note**: Netlify will automatically detect the `netlify.toml` file and use those settings!
 
 ---
 
