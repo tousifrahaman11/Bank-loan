@@ -81,8 +81,7 @@ npm run dev
 ```
 
 7. **Access the Application**
-- Frontend: http://localhost:5173
-- Backend API: http://localhost:5000
+https://ban-loan.netlify.app/
 
 ## 🧪 Testing
 
@@ -272,11 +271,6 @@ MIT License - Free to use for personal and commercial projects
 
 ## 🚀 Deployment
 
-### Free Deployment Options
-
-This project is ready for **FREE** deployment using:
-- **Frontend**: Vercel (recommended) or Netlify
-- **Backend**: Render (recommended) or Railway
 
 ### Quick Start
 
